@@ -33,20 +33,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
-function cumLaude(grades) {
-    let count = 0;
-
-    for (let i = 0; i < grades.length; i++) {
-        if (grades[i] >= 8) {
-            count++;
-        }
-    }
-    return count;
-}
-
-console.log(cumLaude(grades));
-console.log(cumLaude([6, 4, 5]));
-console.log(cumLaude([8, 9, 4, 6, 10]));
+// function cumLaude(grades) {
+//     let count = 0;
+//
+//     for (let i = 0; i < grades.length; i++) {
+//         if (grades[i] >= 8) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+//
+// console.log(cumLaude(grades));
+// console.log(cumLaude([6, 4, 5]));
+// console.log(cumLaude([8, 9, 4, 6, 10]));
 
 
 
@@ -62,8 +62,14 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
-
-
+// let sum = 0;
+//
+//     for (let i = 0; i < grades.length; i++) {
+//         sum += grades[i];
+//     }
+//
+// average1 = sum / grades.length;
+//     console.log(average1);
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
@@ -74,6 +80,17 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 // averageGrade([6, 4, 5]) geeft 5
 // averageGrade([8, 9, 4, 6, 10]) geeft 7.4
 
+function averageGrade(grades) {
+    let counter = 0;
+
+    for (let i = 0; i < grades.length; i++) {
+        counter += grades[i];
+    }
+    return counter / grades.length;
+}
+console.log(averageGrade(grades));
+console.log(averageGrade([6, 4, 5]));
+console.log(averageGrade([8, 9, 4, 6, 10]));
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
