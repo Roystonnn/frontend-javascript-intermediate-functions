@@ -96,7 +96,9 @@ console.log(averageGrade([8, 9, 4, 6, 10]));
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
+let afgerond = averageGrade(grades);
+let rounded = Math.round(afgerond * 100) / 100;
+console.log(rounded);
 
 
 /* Bonusopdracht: hoogste cijfer */
